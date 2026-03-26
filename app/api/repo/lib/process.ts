@@ -26,10 +26,14 @@ export function buildTimeline(commits: any[]) {
     map[date] = (map[date] || 0) + 1
   }
 
-  return Object.entries(map).map(([date, commits]) => ({
-    date,
-    commits
-  }))
+  return Object.entries(map)
+    .map(([date, commits]) => ({
+      date,
+      commits,
+    }))
+    .sort((a, b) => {
+      return new Date(a.date).getTime() - new Date(b.date).getTime()
+    })
 }
 
 export function buildContributors(commits: any[]) {
