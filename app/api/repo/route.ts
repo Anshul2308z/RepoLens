@@ -1,8 +1,17 @@
-import { totalmem } from "os";
 import { fetchCommits, fetchPRs, fetchIssues, fetchBranches } from "./lib/github"
 import { normalizeCommits, buildTimeline,
      buildContributors, buildPRContributors,
       buildIssueContributors, buildStats } from "./lib/process"
+
+function json(data: any, status = 200): Response {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+  })
+}
 
 export async function GET(req: Request): Promise<Response> {
   const { searchParams } = new URL(req.url)
@@ -11,13 +20,13 @@ export async function GET(req: Request): Promise<Response> {
   const branch = searchParams.get("branch") || "main"; 
 
   if (!repoURI) {
-    return Response.json({
+    return json({
       timeline: [],
       contributors: [],
       commits: [],
       prs: [],
       issues: [],
-      branches:[],
+      branches: [],
       stats: {
         totalCommits: 0,
         activeDays: 0,
@@ -26,8 +35,8 @@ export async function GET(req: Request): Promise<Response> {
         busFactor: 0,
         totalContributors: 0
       },
-      error: "Missing repo URL"
-    }, { status: 400 })
+      error: "Missing 'url' query parameter"
+    }, 400)
   }
 
   const parts = repoURI.split("/")
@@ -35,7 +44,7 @@ export async function GET(req: Request): Promise<Response> {
   const repo = parts[4]
 
   if (!owner || !repo) {
-    return Response.json({
+    return json({
       timeline: [],
       contributors: [],
       commits: [],
@@ -51,7 +60,7 @@ export async function GET(req: Request): Promise<Response> {
         totalContributors: 0
       },
       error: "Invalid GitHub URL"
-    }, { status: 400 })
+    }, 400)
   }
 
   try {
@@ -60,7 +69,7 @@ export async function GET(req: Request): Promise<Response> {
     const commits = normalizeCommits(raw)
 
     if (!commits.length) {
-      return Response.json({
+      return json({
         timeline: [],
         contributors: [],
         commits: [],
@@ -76,7 +85,7 @@ export async function GET(req: Request): Promise<Response> {
           totalContributors: 0
         },
         error: "No commits found"
-      })
+      }, 404)
     }
 
     const timeline = buildTimeline(commits)
@@ -98,7 +107,7 @@ export async function GET(req: Request): Promise<Response> {
                     issues
                     )
 
-    return Response.json({
+    return json({
       timeline,
       contributors,
       commits,
@@ -106,11 +115,11 @@ export async function GET(req: Request): Promise<Response> {
       issues,
       branches,
       stats
-    })
+    }, 200)
 
   } catch (err: any) {
     if (err.message === "RATE_LIMIT") {
-      return Response.json({
+      return json({
         timeline: [],
         contributors: [],
         commits: [],
@@ -127,10 +136,10 @@ export async function GET(req: Request): Promise<Response> {
 
         },
         error: "Rate limit exceeded"
-      }, { status: 429 })
+      }, 429)
     }
 
-    return Response.json({
+    return json({
       timeline: [],
       contributors: [],
       commits: [],
@@ -148,6 +157,6 @@ export async function GET(req: Request): Promise<Response> {
       },
 
       error: "Internal server error"
-    }, { status: 500 })
+    }, 500)
   }
 }
