@@ -1,4 +1,4 @@
-# GitHub Repository Visualizer
+# RepoLens 
 
 > Analyze commit history, contributors, and activity trends for any GitHub repository — instantly.
 
