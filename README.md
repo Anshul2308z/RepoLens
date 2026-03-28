@@ -1,143 +1,79 @@
----
+# RepoLens 
 
-# 🚀 RepoLens
-
-> **Turn GitHub repositories into actionable insights — instantly.**
-
-Analyze commit history, contributors, and activity trends with a powerful visual dashboard.
-
----
+> Analyze commit history, contributors, and activity trends for any GitHub repository — instantly.
 
 ## 📸 Preview
 
-<p align="center">
-  <img src="./public/DesktopHomepage.png" alt="Home" width="45%" />
-  <img src="./public/DesktopDashboard.png" alt="Dashboard" width="45%" />
-</p>
 
----
+![Home](./public/DesktopHomepage.png)
+![Dashboard](./public/DesktopDashboard.png)
 
-## 🌐 Live Demo
+## 🚀 Live Demo
 
-👉 [https://git-hub-repolens.vercel.app/](https://git-hub-repolens.vercel.app/)
-
----
+https://git-hub-repolens.vercel.app/
 
 ## ✨ Features
 
-* 📊 **Commit Timeline Visualization**
-  Understand how development evolves over time
+* 📊 Commit timeline visualization
+* 👥 Contributor insights & rankings
+* 🔀 PR and Issue tracking
+* 📈 Activity & momentum analysis
+* ⚠️ Contributor risk detection
 
-* 👥 **Contributor Insights & Rankings**
-  Identify top contributors and their impact
+## 🧠 Why this exists
 
-* 🔀 **PR & Issue Tracking**
-  Track collaboration and workflow efficiency
+GitHub gives raw data — but not clarity.
 
-* 📈 **Activity & Momentum Analysis**
-  Measure project growth and consistency
+This tool transforms repository data into **clear, visual insights** so you can:
 
-* ⚠️ **Contributor Risk Detection**
-  Spot over-dependency on key contributors
+* Understand project health
+* Identify key contributors
+* Track development trends
 
----
+## ⚙️ Tech Stack
 
-## 🧠 Why RepoLens?
+* Next.js
+* TypeScript
+* GitHub REST API
+* (add anything else you used)
 
-GitHub provides **data**, but not always **clarity**.
-
-RepoLens bridges that gap by transforming raw repository data into:
-
-* Clear visual analytics
-* Actionable insights
-* Better decision-making for developers & teams
-
----
-
-## 🏗️ Tech Stack
-
-* **Frontend:** Next.js, TypeScript
-* **API:** GitHub REST API
-* **Styling:** (add Tailwind / CSS / etc.)
-* **Deployment:** Vercel
-
----
-
-## ⚙️ Installation & Setup
+## 🛠️ Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/Anshul2308z/repolens
-
-# Navigate into project
 cd repolens
-
-# Install dependencies
 pnpm install
-
-# Run development server
 pnpm run dev
 ```
 
----
-
 ## 🔑 Environment Variables
 
-Create a `.env.local` file in the root:
+Create a `.env.local` file:
 
 ```env
 GITHUB_TOKEN=your_github_token
 ```
 
-> 💡 Tip: Use a personal access token to avoid rate limits.
+## 📊 Usage
 
----
-
-## 📊 How to Use
-
-1. Paste any GitHub repository URL
+1. Enter any GitHub repository URL
 2. Click **Analyze**
-3. Get instant insights via interactive dashboards
+3. Get instant visual insights
 
----
+## 🚧 Roadmap
 
-## 🗺️ Roadmap
 
-* [ ] 🔍 Compare multiple repositories
-* [ ] 📄 Export analytics reports (PDF/CSV)
-* [ ] 📊 Advanced contributor graphs
-* [ ] ⚡ Smart caching & performance optimization
-* [ ] 🤖 AI-based insights (future scope)
-
----
+* [ ] Compare multiple repositories
+* [ ] Export analytics reports
+* [ ] Advanced contributor graphs
+* [ ] Smarter caching & performance
 
 ## 🤝 Contributing
 
-Contributions are welcome!
-
-Check 👉 `CONTRIBUTING.md` for guidelines.
-
----
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
-See the [LICENSE](./LICENSE) file for details.
+MIT — see [LICENSE](./LICENSE) 
 
----
-
-## ⭐ Support
-
-If you like this project:
-
-* ⭐ Star the repo
-* 🍴 Fork it
-* 📢 Share with others
-
----
-
-## 💡 Author Note
-
-Built to simplify how developers understand repositories — not just code, but **collaboration, consistency, and contribution patterns**.
-
----
+isko badhiya krke de readme
