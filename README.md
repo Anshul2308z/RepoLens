@@ -1,77 +1,154 @@
-# RepoLens 
+Here’s a **clean, professional, and high-impact README** you can directly use (optimized for GitHub visibility, clarity, and recruiter appeal):
 
-> Analyze commit history, contributors, and activity trends for any GitHub repository — instantly.
+---
+
+# 🚀 RepoLens
+
+> **Turn GitHub repositories into actionable insights — instantly.**
+
+Analyze commit history, contributors, and activity trends with a powerful visual dashboard.
+
+---
 
 ## 📸 Preview
 
+<p align="center">
+  <img src="./public/DesktopHomepage.png" alt="Home" width="45%" />
+  <img src="./public/DesktopDashboard.png" alt="Dashboard" width="45%" />
+</p>
 
-![Home](./public/DesktopHomepage.png)
-![Dashboard](./public/DesktopDashboard.png)
+---
 
-## 🚀 Live Demo
+## 🌐 Live Demo
 
-https://git-hub-repolens.vercel.app/
+👉 [https://git-hub-repolens.vercel.app/](https://git-hub-repolens.vercel.app/)
+
+---
 
 ## ✨ Features
 
-* 📊 Commit timeline visualization
-* 👥 Contributor insights & rankings
-* 🔀 PR and Issue tracking
-* 📈 Activity & momentum analysis
-* ⚠️ Contributor risk detection
+* 📊 **Commit Timeline Visualization**
+  Understand how development evolves over time
 
-## 🧠 Why this exists
+* 👥 **Contributor Insights & Rankings**
+  Identify top contributors and their impact
 
-GitHub gives raw data — but not clarity.
+* 🔀 **PR & Issue Tracking**
+  Track collaboration and workflow efficiency
 
-This tool transforms repository data into **clear, visual insights** so you can:
+* 📈 **Activity & Momentum Analysis**
+  Measure project growth and consistency
 
-* Understand project health
-* Identify key contributors
-* Track development trends
+* ⚠️ **Contributor Risk Detection**
+  Spot over-dependency on key contributors
 
-## ⚙️ Tech Stack
+---
 
-* Next.js
-* TypeScript
-* GitHub REST API
-* (add anything else you used)
+## 🧠 Why RepoLens?
 
-## 🛠️ Installation
+GitHub provides **data**, but not always **clarity**.
+
+RepoLens bridges that gap by transforming raw repository data into:
+
+* Clear visual analytics
+* Actionable insights
+* Better decision-making for developers & teams
+
+---
+
+## 🏗️ Tech Stack
+
+* **Frontend:** Next.js, TypeScript
+* **API:** GitHub REST API
+* **Styling:** (add Tailwind / CSS / etc.)
+* **Deployment:** Vercel
+
+---
+
+## ⚙️ Installation & Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/Anshul2308z/repolens
+
+# Navigate into project
 cd repolens
+
+# Install dependencies
 pnpm install
+
+# Run development server
 pnpm run dev
 ```
 
+---
+
 ## 🔑 Environment Variables
 
-Create a `.env.local` file:
+Create a `.env.local` file in the root:
 
 ```env
 GITHUB_TOKEN=your_github_token
 ```
 
-## 📊 Usage
+> 💡 Tip: Use a personal access token to avoid rate limits.
 
-1. Enter any GitHub repository URL
+---
+
+## 📊 How to Use
+
+1. Paste any GitHub repository URL
 2. Click **Analyze**
-3. Get instant visual insights
+3. Get instant insights via interactive dashboards
 
-## 🚧 Roadmap
+---
 
+## 🗺️ Roadmap
 
-* [ ] Compare multiple repositories
-* [ ] Export analytics reports
-* [ ] Advanced contributor graphs
-* [ ] Smarter caching & performance
+* [ ] 🔍 Compare multiple repositories
+* [ ] 📄 Export analytics reports (PDF/CSV)
+* [ ] 📊 Advanced contributor graphs
+* [ ] ⚡ Smart caching & performance optimization
+* [ ] 🤖 AI-based insights (future scope)
+
+---
 
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
+Contributions are welcome!
+
+Check 👉 `CONTRIBUTING.md` for guidelines.
+
+---
 
 ## 📄 License
 
-MIT — see [LICENSE](./LICENSE)
+This project is licensed under the **MIT License**.
+See the [LICENSE](./LICENSE) file for details.
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* ⭐ Star the repo
+* 🍴 Fork it
+* 📢 Share with others
+
+---
+
+## 💡 Author Note
+
+Built to simplify how developers understand repositories — not just code, but **collaboration, consistency, and contribution patterns**.
+
+---
+
+If you want, I can also:
+
+* Add **badges (stars, forks, license, deploy)**
+* Optimize for **GitHub trending**
+* Add a **killer one-line hook for recruiters**
+* Convert this into a **portfolio project description**
+
+Just tell me 👍
